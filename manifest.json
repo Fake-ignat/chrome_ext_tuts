@@ -1,0 +1,23 @@
+{
+    "name": "WebTelegram Chat BanHummer",
+    "version": "1.0",
+    "description": "Base Level Extension",
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+      },
+    "content_scripts": [
+        {
+          "matches": [
+              "https://*.telegram.org/*"
+            ],
+          "run_at": "document_idle",
+          "js": ["content.js"]
+        }
+      ],
+    "manifest_version": 2
+  }
